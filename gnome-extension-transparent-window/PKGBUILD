@@ -1,0 +1,32 @@
+# Maintainer: Lucas Burlingham <lucas@lucasburlingham.me>
+pkgname=transparent-window-moving
+pkgver=8
+pkgrel=2021.09.16
+epoch=
+pkgdesc="Makes window transparent while moving on the desktop"
+arch=('any')
+url="https://github.com/Noobsai/transparent-window-moving"
+license=('GPL')
+groups=('gnome')
+depends=('gnome-shell')
+makedepends=('make')
+checkdepends=()
+optdepends=()
+provides=('gnome-extension-transparent-window-moving')
+install=
+sha256sums=('SKIP')
+src=transparent-window-moving
+
+prepare() {
+	git clone "$url"
+}
+
+build() {
+	cd "$src"
+	make
+}
+
+package() {
+	cd "$src"
+	make DESTDIR="$pkgdir/" install
+}
