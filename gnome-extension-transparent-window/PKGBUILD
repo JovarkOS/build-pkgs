@@ -1,7 +1,7 @@
 # Maintainer: Lucas Burlingham <lucas@lucasburlingham.me>
 pkgname=transparent-window-moving
 pkgver=8
-pkgrel=2021.09.16
+pkgrel=20210916
 epoch=
 pkgdesc="Makes window transparent while moving on the desktop"
 arch=('any')
@@ -14,7 +14,7 @@ checkdepends=()
 optdepends=()
 provides=('gnome-extension-transparent-window-moving')
 install=
-sha256sums=('SKIP')
+sha256sums=()
 _src=transparent-window-moving
 
 prepare() {
