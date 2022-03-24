@@ -15,18 +15,18 @@ optdepends=()
 provides=('gnome-extension-transparent-window-moving')
 install=
 sha256sums=('SKIP')
-src=transparent-window-moving
+_src=transparent-window-moving
 
 prepare() {
 	git clone "$url"
 }
 
 build() {
-	cd "$src"
+	cd "$_src"
 	make
 }
 
 package() {
-	cd "$src"
+	cd "$_src"
 	make DESTDIR="$pkgdir/" install
 }
